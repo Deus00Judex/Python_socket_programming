@@ -25,8 +25,8 @@ def send(msg):
         client.send(message)
         response = client.recv(2048).decode(FORMAT)
         print(response)
-    except:
-        raise Exception("Something went wrong!")
+    except Exception:
+        print("Something went wrong!")
 
 
 def main():

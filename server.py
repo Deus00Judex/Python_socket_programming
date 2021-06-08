@@ -12,7 +12,7 @@ ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE = "Msg received"
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
-list_of_active_connections=[]
+list_of_active_connections = []
 
 
 def handle_client(conn, addr):
@@ -47,11 +47,10 @@ def handle_client(conn, addr):
     list_of_active_connections.remove(addr)
 
 
-
 def start():
     server.listen()
     print(f"[LISTENING] Server is listening on {SERVER}")
-    #Logging
+    # Logging
     with open("logs.txt", "a") as f:
         f.write(f"[LISTENING] Server is listening on {SERVER}\n")
     while True:
@@ -59,18 +58,15 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
 
-        #ggf Probleme, wenn List eine Null-Value enthält
+        # ggf Probleme, wenn List eine Null-Value enthält
         list_of_active_connections.append(addr)
         print(f"[ACTIVE CONNECTIONS] {len(list_of_active_connections)}\n")
 
 
 print("[STARTING] server is starting...")
-#Logging
+# Logging
 with open("logs.txt", "a") as f:
     f.write("[STARTING] server is starting...\n")
-
-
-
 
 
 start()

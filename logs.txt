@@ -41,3 +41,11 @@
 [LISTENING] Server is listening on 192.168.188.39
 [NEW CONNECTION] ('192.168.188.39', 57434) connected.
 [('192.168.188.39', 57434)]: 'hello'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57464) connected.
+[('192.168.188.39', 57464)]: 'hello'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57471) connected.
+[('192.168.188.39', 57471)]: 'hi'

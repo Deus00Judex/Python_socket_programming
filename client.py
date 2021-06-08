@@ -12,7 +12,10 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
 def connect(addr):
-    client.connect(addr)
+    try:
+        client.connect(addr)
+    except ConnectionError:
+        print(f"There is a connection-Problem with {SERVER}")
 
 
 def send(msg):
@@ -25,8 +28,9 @@ def send(msg):
         client.send(message)
         response = client.recv(2048).decode(FORMAT)
         print(response)
-    except Exception:
-        print("Something went wrong!")
+    except Exception as exeption:
+        print("Something went wrong while sending your message!")
+        print(exeption)
 
 
 def main():

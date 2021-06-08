@@ -10,8 +10,10 @@ addr = (SERVER, PORT)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+
 def connect(addr):
     client.connect(addr)
+
 
 def send(msg):
     message = msg.encode(FORMAT)
@@ -21,9 +23,9 @@ def send(msg):
     client.send(send_length)
     client.send(message)
     response = client.recv(2048).decode(FORMAT)
-    if  response != ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE:
+    if response != ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE:
         print("Something went wrong")
-    else :
+    else:
         print(response)
 
 
@@ -33,5 +35,6 @@ def main():
     while msg != DISCONNECT_MESSAGE:
         msg = input(str)
         send(msg)
+
 
 main()

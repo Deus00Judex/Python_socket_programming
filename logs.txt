@@ -49,3 +49,35 @@
 [LISTENING] Server is listening on 192.168.188.39
 [NEW CONNECTION] ('192.168.188.39', 57471) connected.
 [('192.168.188.39', 57471)]: 'hi'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57493) connected.
+[('192.168.188.39', 57493)]: 'hello'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57532) connected.
+[('192.168.188.39', 57532)]: 'hi'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57540) connected.
+[('192.168.188.39', 57540)]: 'sdg'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57541) connected.
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57542) connected.
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57568) connected.
+[NEW CONNECTION] ('192.168.188.39', 57569) connected.
+[NEW CONNECTION] ('192.168.188.39', 57576) connected.
+[('192.168.188.39', 57576)]: 'hello'
+[DISCONNECTING ('192.168.188.39', 57576)]
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57579) connected.
+[('192.168.188.39', 57579)]: 'hello'
+[DISCONNECTING ('192.168.188.39', 57579)]
+[NEW CONNECTION] ('192.168.188.39', 57580) connected.
+[('192.168.188.39', 57580)]: 'hello again'

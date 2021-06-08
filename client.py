@@ -40,4 +40,5 @@ def main():
         msg = input(str)
         send(msg)
 
+
 main()

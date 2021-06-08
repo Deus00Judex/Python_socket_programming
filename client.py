@@ -16,17 +16,17 @@ def connect(addr):
 
 
 def send(msg):
-    message = msg.encode(FORMAT)
-    msg_length = len(message)
-    send_length = str(msg_length).encode(FORMAT)
-    send_length += b' ' * (HEADER - len(send_length))
-    client.send(send_length)
-    client.send(message)
-    response = client.recv(2048).decode(FORMAT)
-    if response != ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE:
-        print("Something went wrong")
-    else:
+    try:
+        message = msg.encode(FORMAT)
+        msg_length = len(message)
+        send_length = str(msg_length).encode(FORMAT)
+        send_length += b' ' * (HEADER - len(send_length))
+        client.send(send_length)
+        client.send(message)
+        response = client.recv(2048).decode(FORMAT)
         print(response)
+    except:
+        raise Exception("Something went wrong!")
 
 
 def main():
@@ -35,6 +35,5 @@ def main():
     while msg != DISCONNECT_MESSAGE:
         msg = input(str)
         send(msg)
-
 
 main()

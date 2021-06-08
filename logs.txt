@@ -21,3 +21,19 @@
 [NEW CONNECTION] ('192.168.188.23', 54884) connected.
 [('192.168.188.22', 41418)]: 'Hello from 192.168.188.22'
 [('192.168.188.23', 54884)]: 'Hello from 192.168.188.23'
+[NEW CONNECTION] ('192.168.188.39', 56677) connected.
+[('192.168.188.39', 56677)]: 'Hello'
+[DISCONNECTING ('192.168.188.39', 56677)]
+[NEW CONNECTION] ('192.168.188.39', 57333) connected.
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57351) connected.
+[('192.168.188.39', 57351)]: 'Hello'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57390) connected.
+[('192.168.188.39', 57390)]: 'hello'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 57394) connected.
+[('192.168.188.39', 57394)]: 'hier'

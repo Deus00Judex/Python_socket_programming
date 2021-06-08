@@ -12,6 +12,9 @@ ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE = "Msg received"
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
+list_of_active_connections=[]
+
+
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
     # Logging
@@ -41,6 +44,9 @@ def handle_client(conn, addr):
     with open("logs.txt", "a") as f:
         f.write(f"[DISCONNECTING {addr}]\n")
     conn.close()
+    list_of_active_connections.remove(addr)
+
+
 
 def start():
     server.listen()
@@ -52,11 +58,24 @@ def start():
         conn, addr = server.accept()
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
-        print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
+
+        #ggf Probleme, wenn List eine Null-Value enthält
+        list_of_active_connections.append(addr)
+        print(f"[ACTIVE CONNECTIONS] {len(list_of_active_connections)}\n")
 
 
 print("[STARTING] server is starting...")
 #Logging
 with open("logs.txt", "a") as f:
     f.write("[STARTING] server is starting...\n")
+
+
+
+
+
+
+
+
+
+
 start()

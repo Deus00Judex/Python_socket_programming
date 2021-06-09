@@ -61,6 +61,7 @@ def start():
         # ggf Probleme, wenn List eine Null-Value enthält
         list_of_active_connections.append(addr)
         print(f"[ACTIVE CONNECTIONS] {len(list_of_active_connections)}\n")
+        print(f"[ACTIVE CONNECTIONS] {list_of_active_connections}\n")
 
 
 print("[STARTING] server is starting...")

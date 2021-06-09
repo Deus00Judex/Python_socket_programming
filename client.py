@@ -5,6 +5,8 @@ PORT = 5050
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE = "Msg received"
+EMPTY_MESSAGE = ""
+
 SERVER = "192.168.188.39"
 addr = (SERVER, PORT)
 
@@ -20,6 +22,9 @@ def connect(addr):
 
 def send(msg):
     try:
+        if msg == EMPTY_MESSAGE:
+            print("Please note that empty messages will be ignored")
+            return
         message = msg.encode(FORMAT)
         msg_length = len(message)
         send_length = str(msg_length).encode(FORMAT)

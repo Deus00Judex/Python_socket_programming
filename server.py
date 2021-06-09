@@ -8,7 +8,7 @@ ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE = "Msg received"
-EMPTY_MESSAGE = ""
+
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
@@ -30,9 +30,6 @@ def handle_client(conn, addr):
             msg = conn.recv(msg_length).decode(FORMAT)
             if msg == DISCONNECT_MESSAGE:
                 connected = False
-            elif msg == EMPTY_MESSAGE:
-                conn.send(ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE.encode(FORMAT))
-                continue
             else:
                 print(f"[{addr}] {msg}")
                 # Logging

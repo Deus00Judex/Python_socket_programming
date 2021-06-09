@@ -81,3 +81,27 @@
 [DISCONNECTING ('192.168.188.39', 57579)]
 [NEW CONNECTION] ('192.168.188.39', 57580) connected.
 [('192.168.188.39', 57580)]: 'hello again'
+[NEW CONNECTION] ('192.168.188.39', 55967) connected.
+[('192.168.188.39', 55967)]: 'hello'
+[DISCONNECTING ('192.168.188.39', 55967)]
+[NEW CONNECTION] ('192.168.188.39', 55970) connected.
+[('192.168.188.39', 55970)]: 'hello'
+[NEW CONNECTION] ('192.168.188.39', 55971) connected.
+[('192.168.188.39', 55971)]: 'hello'
+[('192.168.188.39', 55971)]: 'jgsniog'
+[NEW CONNECTION] ('192.168.188.39', 55974) connected.
+[('192.168.188.39', 55974)]: 'efsgwe'
+[('192.168.188.39', 55974)]: 'gwe'
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 56063) connected.
+[NEW CONNECTION] ('192.168.188.39', 56068) connected.
+[NEW CONNECTION] ('192.168.188.39', 56069) connected.
+[STARTING] server is starting...
+[LISTENING] Server is listening on 192.168.188.39
+[NEW CONNECTION] ('192.168.188.39', 56176) connected.
+[NEW CONNECTION] ('192.168.188.39', 56179) connected.
+[('192.168.188.39', 56179)]: 'hello'
+[NEW CONNECTION] ('192.168.188.39', 56184) connected.
+[('192.168.188.39', 56179)]: 'hello'
+[('192.168.188.39', 56184)]: 'daw'

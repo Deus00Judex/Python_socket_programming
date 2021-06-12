@@ -5,8 +5,6 @@ PORT = 5050
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 ACKNOWLEDGEMENT_OF_RECEIPT_MESSAGE = "Msg received"
-EMPTY_MESSAGE = ""
-
 SERVER = "192.168.188.39"
 addr = (SERVER, PORT)
 
@@ -16,15 +14,14 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 def connect(addr):
     try:
         client.connect(addr)
+        return True
     except ConnectionError:
         print(f"There is a connection-Problem with {SERVER}")
+        return False
 
 
 def send(msg):
     try:
-        if msg == EMPTY_MESSAGE:
-            print("Please note that empty messages will be ignored")
-            return
         message = msg.encode(FORMAT)
         msg_length = len(message)
         send_length = str(msg_length).encode(FORMAT)
@@ -39,11 +36,14 @@ def send(msg):
 
 
 def main():
-    connect(addr)
-    msg = ""
-    while msg != DISCONNECT_MESSAGE:
-        msg = input(str)
-        send(msg)
+    if not connect(addr):
+        print("ERROR")
+    else:
+        msg = ""
+        while msg != DISCONNECT_MESSAGE:
+            msg = input(str)
+            send(msg)
 
 
 main()
+#Test

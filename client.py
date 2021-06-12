@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import socket
 
 HEADER = 64
@@ -38,7 +37,8 @@ def send(msg):
 
 def main():
     if not connect(addr):
-        print("ERROR")
+        print("ERROR\nTerminating Process now")
+        quit()
     else:
         msg = ""
         while msg != DISCONNECT_MESSAGE:
